@@ -1,38 +1,341 @@
-.App {
-  text-align: center;
+/***************/
+/*  App        */
+/***************/
+.app {
+    text-align: center;
+    margin: 0 auto;
+    width: 650px;
+    padding-top: 10px;
+    font-family: monospace;
+    position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+    background-color: white;
+    width: 600px;
+    margin: 48px auto 24px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 1px rgba(130, 100, 120, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+    font-size: 62px;
+    font-weight: 400;
+    opacity: 0.5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header h2 {
+    font-size: 40px;
+    font-weight: 400;
+    opacity: 0.5;
 }
 
-.App-link {
-  color: #61dafb;
+/***************/
+/*  Loader     */
+/***************/
+.loader-container {
+    width: 100%;
+    color: navy;
+    font-size: 40px;
+    font-weight: bold;
+    vertical-align: middle;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loader-icon {
+    padding: 25px;
+    font-size: 80px;
+    color: navy;
+}
+
+/***************/
+/*  Message    */
+/***************/
+.message-container {
+    display: table;
+    overflow: hidden;
+    width: 100%;
+    height: 120px;
+    color: navy;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.message-container.msg-error {
+    background-color: rgb(229, 147, 188);
+    border: 2px solid rgb(128, 0, 128);
+}
+
+.message-container.msg-result {
+    background-color: rgb(219, 205, 159);
+    border: 2px solid rgb(61, 43, 8);
+}
+
+.message-text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/***************/
+/*  User       */
+/***************/
+.appUser {
+    text-align: left;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+div.appUser {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.appUser label {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+.appUser input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.appUser button {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/***************/
+/*  Repo       */
+/***************/
+.appRepo {
+    text-align: left;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+div.appRepo {
+    border-radius: 5px;
+    background-color: #c3c3c3;
+    padding: 20px;
+}
+
+.appRepo #goButton {
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.appRepoCol {
+    font-size: 40px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.repo-container {
+    border: 3px solid blue;
+    padding: 20px 40px 20px;
+    margin-bottom: 20px;
+}
+
+.repo-container-image {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 30px 0 0;
+}
+
+.repo-container-text {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 60%;
+}
+
+.repo-container-text-row {
+    display: flex;
+}
+
+.repo-container-text-left {
+    flex: 15%;
+    padding: 5px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.repo-list-header-text {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: navy;
+}
+
+.repo-container-text-right {
+    flex: 75%;
+    padding: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.appRepo #resetButton {
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+    border: none;
+    background-color: #3e449e;
+    color: white;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/***************/
+/*  Search     */
+/***************/
+.search-container i {
+    position: absolute;
+}
+
+.search-container {
+    margin: 26px auto;
+    width: 100%;
+}
+
+.search-icon {
+    padding: 25px;
+    font-size: 20px;
+    color: #555;
+    right: 28px;
+}
+
+.search-container #search-input {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+/***************/
+/*  ReposList  */
+/***************/
+.appRepo .repo-list-button {
+    display: block;
+    width: 30px;
+    border: none;
+    background-color: #d46240;
+    color: navy;
+    padding: 3px 4px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.repo-table-container table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.repo-table-container th,
+.repo-table-container td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: 2px solid #fff;
+}
+
+/***************/
+/*  Language   */
+/***************/
+.language-select {
+    padding-left: 100px;
+    height: 40px;
+    position: relative;
+    border: 1px solid #333;
+    width: 300px;
+    display: block;
+    font-size: 15px;
+    appearance: none;
+    border-radius: 0;
+}
+
+.language-label {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    line-height: 40px;
+    pointer-events: none;
+    text-indent: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/***************/
+/*  Filter     */
+/***************/
+.filter-container {
+    margin: 26px auto;
+    border-radius: 10px;
+    background-color: grey;
+    border-color: black;
+    display: inline-table;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.filter-nav-link {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    width: 25%;
+}
+
+.filter-nav-link:link {
+    color: navy;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+.filter-nav-link:visited {
+    color: navy;
+}
+
+.filter-nav-link:hover {
+    color: yellow;
 }
